@@ -14,39 +14,39 @@
    Write the main method to create an object and invoke the above methods. 
    */
 public class binod {
-    public static void main(String args[]) {
-        binod tharu = new binod();
-        int r1 = tharu.Sum(4, 16);
-        double r2 = tharu.Sum(2.0);
-        int r3 = tharu.Sum(43961);
-        System.out.println(r1 + "\n" + r2 + "\n" + r3);
-    }
+	public static void main(String args[]) {
+		binod tharu = new binod();
+		int r1 = tharu.Sum(4, 16);
+		double r2 = tharu.Sum(2.0);
+		int r3 = tharu.Sum(43961);
+		System.out.println(r1 + "\n" + r2 + "\n" + r3);
+	}
 
-    int Sum(int A, int B) {
-        int evenSum = 0;
-        for (int i = A; i <= B; i++) {
-            if (i % 2 == 0)
-                evenSum += i;
-        }
-        return evenSum;
-    }
+	int Sum(int A, int B) {
+		int evenSum = 0;
+		for (int i = A; i <= B; i++) {
+			if (i % 2 == 0)
+				evenSum += i;
+		}
+		return evenSum;
+	}
 
-    double Sum(double N) {
-        double answer = 1.0;
-        for (double i = 1.0; i <= N; i += 0.2)
-            answer *= i;
-        return answer;
-    }
+	double Sum(double N) {
+		double answer = 1.0;
+		for (double i = 1.0; i <= N; i += 0.2)
+			answer *= i;
+		return answer;
+	}
 
-    int Sum(int N) {
-        int sum = 0;
-        int dig;
-        while (N > 0) {
-            dig = N % 10;
-            if (dig % 2 != 0)
-                sum += dig;
-            N /= 10;
-        }
-        return sum;
-    }
+	int Sum(int N) {
+		int sum = 0;
+		int dig;
+		while (N > 0) {
+			dig = N % 10;
+			if (dig % 2 != 0)
+				sum += dig;
+			N /= 10;
+		}
+		return sum;
+	}
 }

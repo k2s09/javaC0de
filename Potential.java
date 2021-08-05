@@ -6,61 +6,61 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Potential {
-    public static void main(String args[]) throws IOException {
-        // Getting Input
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Enter sentence in upper case: ");
-        String sentence = br.readLine();
-        // Variables
-        sentence = sentence.trim();
-        sentence += " ";
-        char ch;
-        String word = "";
-        int length = sentence.length();
-        int sum = 0;
-        int counter = 1;
-        int arrSum[] = new int[length];
-        String arrStr[] = new String[length];
-        //Printing potential of each word. Each word and it's sum stored in an array
-        System.out.println("\nPotential: ");
-        for (int i = 0; i < length; i++) {
-            ch = sentence.charAt(i);
-            if (ch != ' ') {
-                sum += (int) (ch - 64);
-                word += ch;
-            } else {
-                arrSum[counter] = sum;
-                arrStr[counter] = word;
-                System.out.println(word + ": " + sum);
-                sum = 0;
-                word = "";
-                counter += 1;
-            }
-        }
-        // Sorting words based on potential using Bubble Sort
-        int temp;
-        String tem;
-        for (int i = 0; i < counter; i++) {
-            for (int j = 0; j < (counter - i - 1); j++) {
-                if (arrSum[j] > arrSum[j + 1]) {
-                    //Swapping potential values
-                    temp = arrSum[j];
-                    arrSum[j] = arrSum[j + 1];
-                    arrSum[j + 1] = temp;
+	public static void main(String args[]) throws IOException {
+		// Getting Input
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter sentence in upper case: ");
+		String sentence = br.readLine();
+		// Variables
+		sentence = sentence.trim();
+		sentence += " ";
+		char ch;
+		String word = "";
+		int length = sentence.length();
+		int sum = 0;
+		int counter = 1;
+		int arrSum[] = new int[length];
+		String arrStr[] = new String[length];
+		//Printing potential of each word. Each word and it's sum stored in an array
+		System.out.println("\nPotential: ");
+		for (int i = 0; i < length; i++) {
+			ch = sentence.charAt(i);
+			if (ch != ' ') {
+				sum += (int) (ch - 64);
+				word += ch;
+			} else {
+				arrSum[counter] = sum;
+				arrStr[counter] = word;
+				System.out.println(word + ": " + sum);
+				sum = 0;
+				word = "";
+				counter += 1;
+			}
+		}
+		// Sorting words based on potential using Bubble Sort
+		int temp;
+		String tem;
+		for (int i = 0; i < counter; i++) {
+			for (int j = 0; j < (counter - i - 1); j++) {
+				if (arrSum[j] > arrSum[j + 1]) {
+					//Swapping potential values
+					temp = arrSum[j];
+					arrSum[j] = arrSum[j + 1];
+					arrSum[j + 1] = temp;
 
-                    //Swapping corresponding word
-                    tem = arrStr[j];
-                    arrStr[j] = arrStr[j + 1];
-                    arrStr[j + 1] = tem;
-                }
-            }
-        }
-        //Printing the final values
-        System.out.println();
-        for (int i = 1; i < counter; i++)
-            System.out.print(arrStr[i] + "  ");
-        System.out.println();
-    }
+					//Swapping corresponding word
+					tem = arrStr[j];
+					arrStr[j] = arrStr[j + 1];
+					arrStr[j + 1] = tem;
+				}
+			}
+		}
+		//Printing the final values
+		System.out.println();
+		for (int i = 1; i < counter; i++)
+			System.out.print(arrStr[i] + "  ");
+		System.out.println();
+	}
 }
 /**
  * Variable data table

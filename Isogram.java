@@ -1,50 +1,50 @@
 import java.util.Scanner;
 
 public class Isogram {
-    public static void main(String args[]) {
-        Scanner Sc = new Scanner(System.in);
-        System.out.println("Enter sentence: ");
-        String sentence = Sc.nextLine();
-        sentence += " ";
-        int length = sentence.length();
-        String word = "";
-        char h;
-        String str[] = new String[length];
-        int count = 0;
-        // Seperating words of the sentence and putting in string array
-        for (int i = 0; i < length; i++) {
-            h = sentence.charAt(i);
-            if (h != 32)
-                word += h;
-            if (h == 32) {
-                str[count] = word;
-                count += 1;
-                word = "";
-            }
-        }
-        // Checking if each word is an isogram
-        for (int x = 0; x < count; x++) {
-            int a = str[x].length();
-            int flag = 0;
-            char ch, as;
-            for (int i = 0; i < (a - 1); i++) {
-                ch = str[x].charAt(i);
-                for (int j = (i + 1); j < a; j++) {
-                    as = str[x].charAt(j);
-                    if (ch == as) {
-                        flag += 1;
-                        break;
-                    }
-                }
-                if (flag > 0) {
-                    System.out.println(str[x] + " is not an isogram");
-                    break;
-                }
-            }
-            if (flag == 0)
-                System.out.println(str[x] + " is an isogram");
-        }
-    }
+	public static void main(String args[]) {
+		Scanner Sc = new Scanner(System.in);
+		System.out.println("Enter sentence: ");
+		String sentence = Sc.nextLine();
+		sentence += " ";
+		int length = sentence.length();
+		String word = "";
+		char h;
+		String str[] = new String[length];
+		int count = 0;
+		// Seperating words of the sentence and putting in string array
+		for (int i = 0; i < length; i++) {
+			h = sentence.charAt(i);
+			if (h != 32)
+				word += h;
+			if (h == 32) {
+				str[count] = word;
+				count += 1;
+				word = "";
+			}
+		}
+		// Checking if each word is an isogram
+		for (int x = 0; x < count; x++) {
+			int a = str[x].length();
+			int flag = 0;
+			char ch, as;
+			for (int i = 0; i < (a - 1); i++) {
+				ch = str[x].charAt(i);
+				for (int j = (i + 1); j < a; j++) {
+					as = str[x].charAt(j);
+					if (ch == as) {
+						flag += 1;
+						break;
+					}
+				}
+				if (flag > 0) {
+					System.out.println(str[x] + " is not an isogram");
+					break;
+				}
+			}
+			if (flag == 0)
+				System.out.println(str[x] + " is an isogram");
+		}
+	}
 }
 /**
  * Variable Data Table

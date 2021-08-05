@@ -8,38 +8,38 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class fascinatingNumber {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter lower range: ");
-        int l = sc.nextInt();
-        System.out.println("Enter higher range: ");
-        int h = sc.nextInt();
-        int count = 0;
-        for (int i = l; i <= h; i++) {
-            if (isFascinating(i)) {
-                System.out.print(i + " ");
-                count += 1;
-            }
-        }
-        System.out.println("\nNo of fascinating numbers found: " + count);
-    }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter lower range: ");
+		int l = sc.nextInt();
+		System.out.println("Enter higher range: ");
+		int h = sc.nextInt();
+		int count = 0;
+		for (int i = l; i <= h; i++) {
+			if (isFascinating(i)) {
+				System.out.print(i + " ");
+				count += 1;
+			}
+		}
+		System.out.println("\nNo of fascinating numbers found: " + count);
+	}
 
-    static boolean isFascinating(int no) {
-        int two = no * 2;
-        int three = no * 3;
-        String str = "" + no + two + three;
-        // Removing all zeroes from number
-        String temp = str;
-        str = "";
-        for (int i = 0; i < temp.length(); i++) {
-            char ch = temp.charAt(i);
-            if (ch != '0')
-                str += ch;
-        }
-        // Sorting digits in ascending order
-        char[] digits = str.toCharArray();
-        Arrays.sort(digits);
-        String sortedDigits = String.valueOf(digits);
-        return sortedDigits.equals("123456789");
-    }
+	static boolean isFascinating(int no) {
+		int two = no * 2;
+		int three = no * 3;
+		String str = "" + no + two + three;
+		// Removing all zeroes from number
+		String temp = str;
+		str = "";
+		for (int i = 0; i < temp.length(); i++) {
+			char ch = temp.charAt(i);
+			if (ch != '0')
+				str += ch;
+		}
+		// Sorting digits in ascending order
+		char[] digits = str.toCharArray();
+		Arrays.sort(digits);
+		String sortedDigits = String.valueOf(digits);
+		return sortedDigits.equals("123456789");
+	}
 }

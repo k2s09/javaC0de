@@ -5,25 +5,25 @@
 import java.util.Scanner;
 
 public class magicNumber {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number");
-        int num = sc.nextInt();
-        int sum = 0, digit = 0, counter = 0;
-        do {
-            sum = 0;
-            while (num > 0) {
-                digit = num % 10;
-                sum += digit;
-                num /= 10;
-            }
-            num = sum;
-            counter += 1;
-        } while (num > 9);
+	public static void main(String args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number");
+		int num = sc.nextInt();
+		int sum = 0, digit = 0, counter = 0;
+		do {
+			sum = 0;
+			while (num > 0) {
+				digit = num % 10;
+				sum += digit;
+				num /= 10;
+			}
+			num = sum;
+			counter += 1;
+		} while (num > 9);
 
-        if (num == 1)
-            System.out.println("It is a magic number and it reached 1 in " + counter + " iterations");
-        else
-            System.out.println("It is not a magic number");
-    }
+		if (num == 1)
+			System.out.println("It is a magic number and it reached 1 in " + counter + " iterations");
+		else
+			System.out.println("It is not a magic number");
+	}
 }

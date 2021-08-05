@@ -11,41 +11,41 @@ Write a program to accept an even integer ‘N’ where N > 9 and N < 50. Find a
 import java.util.Scanner;
 
 public class goldbach {
-    public static void main(String args[]) {
-        // Taking inputs
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number");
-        int num = sc.nextInt();
-        if (num < 0 || num % 2 != 0 || num <= 9 || num >= 50) { // Checking if number is invalid
-            System.out.println("Invalid input");
-            System.exit(0);
-        }
-        if (num % 2 == 0 && num > 4) { // If num is even and greater than 4, then its goldback
-            // Finding pairs
-            System.out.println("It is a goldbach number \nPairs are:");
-            for (int i = 3; i < num; i += 2) {
-                for (int j = 3; j < num; j += 2) {
-                    if (isPrime(i) && isPrime(j) && i + j == num && i <= j) { // If both numbers are odd primes and they add to the original no, they are required pairs
-                        System.out.println(i + " " + j); // Printing the pairs
-                    }
-                }
-            }
-        } else {
-            System.out.println("It's not a goldbach number");
-        }
-    }
+	public static void main(String args[]) {
+		// Taking inputs
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter number");
+		int num = sc.nextInt();
+		if (num < 0 || num % 2 != 0 || num <= 9 || num >= 50) { // Checking if number is invalid
+			System.out.println("Invalid input");
+			System.exit(0);
+		}
+		if (num % 2 == 0 && num > 4) { // If num is even and greater than 4, then its goldback
+			// Finding pairs
+			System.out.println("It is a goldbach number \nPairs are:");
+			for (int i = 3; i < num; i += 2) {
+				for (int j = 3; j < num; j += 2) {
+					if (isPrime(i) && isPrime(j) && i + j == num && i <= j) { // If both numbers are odd primes and they add to the original no, they are required pairs
+						System.out.println(i + " " + j); // Printing the pairs
+					}
+				}
+			}
+		} else {
+			System.out.println("It's not a goldbach number");
+		}
+	}
 
-    public static boolean isPrime(int num) { // Checking if number is a prime
-        int flag = 0;
-        for (int i = 2; i < num; i++) {
-            if (num % i == 0) {
-                flag += 1;
-                break;
-            }
-        }
-        if (flag == 0)
-            return true;
-        else
-            return false;
-    }
+	public static boolean isPrime(int num) { // Checking if number is a prime
+		int flag = 0;
+		for (int i = 2; i < num; i++) {
+			if (num % i == 0) {
+				flag += 1;
+				break;
+			}
+		}
+		if (flag == 0)
+			return true;
+		else
+			return false;
+	}
 }

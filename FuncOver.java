@@ -1,33 +1,33 @@
 // Making a program using function overload
 
 class FuncOver {
-    double aa;
+	double aa;
 
-    public static void main(String args[]) {
-        FuncOver B = new FuncOver();
-        double r1 = B.area(2.0, 3.0, 4.0);
-        double r2 = B.area(2, 5, 10);
-        double r3 = B.area(5.0, 7.0);
-        System.out.println("The area of the scalene triangle is " + r1);
-        System.out.println("The area of the trapezium is " + r2);
-        System.out.println("The area of the rhombus is " + r3);
-    }
+	public static void main(String args[]) {
+		FuncOver B = new FuncOver();
+		double r1 = B.area(2.0, 3.0, 4.0);
+		double r2 = B.area(2, 5, 10);
+		double r3 = B.area(5.0, 7.0);
+		System.out.println("The area of the scalene triangle is " + r1);
+		System.out.println("The area of the trapezium is " + r2);
+		System.out.println("The area of the rhombus is " + r3);
+	}
 
-    double area(double a, double b, double c) {
-        double s = (a + b + c) / 2;
-        aa = Math.sqrt(s * (s - a) * (s - b) * (s - c));
-        return aa;
-    }
+	double area(double a, double b, double c) {
+		double s = (a + b + c) / 2;
+		aa = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+		return aa;
+	}
 
-    double area(int a, int b, int c) {
-        aa = c / 2 * (a + b);
-        return aa;
-    }
+	double area(int a, int b, int c) {
+		aa = c / 2 * (a + b);
+		return aa;
+	}
 
-    double area(double d1, double d2) {
-        aa = (d1 * d2) / 2;
-        return aa;
-    }
+	double area(double d1, double d2) {
+		aa = (d1 * d2) / 2;
+		return aa;
+	}
 }
 /**
  * Variable Data Table
