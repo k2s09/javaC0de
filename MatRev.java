@@ -1,24 +1,31 @@
 import java.util.Scanner;
 public class MatRev {
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter number of rows and columns: ");
-		int r = sc.nextInt();
-		int c = sc.nextInt();
-		System.out.println("Enter " + (r*c) + " elements: ");
-		int[][] arr = new int[r][c];
-		for (int i = 0; i < r; i++) {
-			for (int j = 0; j < c; j++) {
-				int tmp = sc.nextInt();
-				arr[i][j] = reverse(tmp);
+	int[][] arr;
+	int m, n;
+	MatRev(int mm, int nn) {
+		m = mm;
+		n = nn;
+		arr = new int[m][n];
+	}
+	public static void main(String args[]) {
+		MatRev A = new MatRev(3,3);
+		A.fillarray();
+		A.revMat(A);
+		A.show();
+	}
+	void revMat(MatRev P) {
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				arr[i][j] = reverse(P.arr[i][j]);
 			}
 		}
-		sc.close();
-		for (int i = 0; i < r; i++) {
-			for (int j = 0; j < c; j++) {
-				System.out.print(arr[i][j] + " ");
+	}
+	void fillarray() {
+		Scanner sc = new Scanner(System.in);
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				arr[i][j] = sc.nextInt();
 			}
-			System.out.println();
 		}
 	}
 	static int reverse(int a) {
@@ -27,5 +34,13 @@ public class MatRev {
 		sb.reverse();
 		str = sb.toString();
 		return Integer.parseInt(str);
+	}
+	void show() {
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				System.out.print(arr[i][j] + " ");
+			}
+			System.out.println();
+		}
 	}
 }
