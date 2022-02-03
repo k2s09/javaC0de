@@ -13,6 +13,7 @@ class ArmStrongNumber {
 		Scanner Sc = new Scanner(System.in);
 		System.out.println("Enter number to be checked for being an armstrong number");
 		n = Sc.nextInt();
+		Sc.close();
 		k = n;
 		while (k > 0) {
 			f = (k % 10);
