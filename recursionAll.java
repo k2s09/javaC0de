@@ -1,5 +1,4 @@
 import java.util.Arrays;
-
 public class recursionAll {
     public static void main(String[] args) {
         System.out.println(sumOfN(10));
@@ -9,9 +8,11 @@ public class recursionAll {
         System.out.println(reverse1("hello"));
         char[] word = {'h','e','l','l','o'};
         System.out.println(reverse2(word, word.length, 0));
-        int[] arr = {1, 2, 3, 4, 5};
+        int[] arr = {2, 4, 1, 5, 3};
         System.out.println(linearSearch(arr, 3, 0));
+        bubbleSort(arr, 0, 0);
         System.out.println(binarySearch(arr, 0, 4, 3));
+
     }
     static int sumOfN(int n) {
         if (n == 0)
