@@ -1,70 +1,56 @@
-import java.util.Arrays;
 public class recursion {
-    public static void main(String[] args) {
-        System.out.println(multiply(4, 5));
-        System.out.println(exponent(2, 3));
-        System.out.println(factorial(5));
-        System.out.println(sumOfNaturalNumbers(10));
-        System.out.println(reverse("Hello!"));
-        System.out.println(reverse2(new char[]{'h', 'e', 'l', 'l', 'o'}, 0));
-        System.out.println(linearSearch(new int[]{1, 2, 3, 4, 5}, 3, 0));
-        System.out.println(binarySearch(new int[]{1, 2, 3, 4, 5}, 0, 4, 3));
-        bubbleSort(new int[]{3, 2, 5, 4, 1}, 0, 0);
-    }
 
-    static int multiply(int a, int b) {
-        if (b == 0)
-            return 0;
-        return a + multiply(a, --b);
-    }
-
-    static int exponent(int a, int b) {
-        if (b == 0)
-            return 1;
-        return a * exponent(a, --b);
-    }
-
-    static int factorial(int a) {
-        if (a == 1)
-            return a;
-        return a * factorial(--a);
-    }
-
-    static int sumOfNaturalNumbers(int n) {
-        // n + n-1 + n-2 + n-3 + ... + 1
+    static int sumOfN(int n) {
         if (n == 0)
             return 0;
-        return n + sumOfNaturalNumbers(--n);
+        return n + sumOfN(--n);
     }
 
-    static String reverse(String s) {
+    static int multiplication(int a, int b) {
+        if (b == 0)
+            return 0;
+        return a + multiplication(a, --b);
+    }
+
+    static int power(int a, int b) {
+        if (b == 1)
+            return a;
+        return a * power(a, --b);
+    }
+
+    static int factorial(int n) {
+        if (n == 1)
+            return 1;
+        return n * (factorial(--n));
+    }
+
+    static String reverse1(String s) {
         if (s.length() == 0)
             return s;
-        return reverse(s.substring(1)) + s.charAt(0);
+        return reverse1(s.substring(1)) + s.charAt(0);
     }
 
-    static String reverse2(char[] str, int i) {
-        if (i == str.length/2) {
-            return String.valueOf(str);
-        }
+    static char[] reverse2(char[] str, int length, int i) {
+        if (i == str.length / 2)
+            return str;
         char tmp = str[i];
-        str[i] = str[str.length-i-1];
-        str[str.length-i-1] = tmp;
-        return reverse2(str, ++i);
+        str[i] = str[length - i - 1];
+        str[length - i - 1] = tmp;
+        return reverse2(str, length, ++i);
     }
 
     static int linearSearch(int[] arr, int e, int i) {
+        if (i == arr.length - 1)
+            return -1;
         if (arr[i] == e)
             return i;
-        if (i == arr.length-1)
-            return -1;
         return linearSearch(arr, e, ++i);
     }
 
     static int binarySearch(int[] arr, int l, int u, int e) {
         if (l > u)
             return -1;
-        int m = (l+u)/2;
+        int m = (l + u) / 2;
         while (l <= u) {
             if (arr[m] == e)
                 return m;
@@ -80,18 +66,95 @@ public class recursion {
         if (j == arr.length - i - 1) {
             if (i != arr.length - 2) {
                 bubbleSort(arr, ++i, 0);
+            } else {
+                for (int k = 0; k < arr.length; k++) {
+                    System.out.print(i + " ");
+                }
             }
-            else {
-                System.out.println(Arrays.toString(arr));
-            }
-        }
-        else {
-            if (arr[j] > arr[j+1]) {
+        } else {
+            if (arr[j] > arr[j + 1]) {
                 int temp = arr[j];
-                arr[j] = arr[j+1];
-                arr[j+1] = temp;
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
             }
             bubbleSort(arr, i, ++j);
         }
     }
+
+    static void selectionSort(int[] arr, int n, int i) {
+        if (i == n)
+            return;
+        int k = minIndex(arr, i, n - 1);
+        if (k != i) {
+            int tmp = arr[k];
+            arr[k] = arr[i];
+            arr[i] = tmp;
+        }
+        selectionSort(arr, n, ++i);
+    }
+
+    static int minIndex(int[] arr, int c, int index) {
+        if (c == arr.length - 2)
+            return index;
+        index = arr[c];
+        if (index < arr[c + 1])
+            return minIndex(arr, ++c, c + 1);
+        return minIndex(arr, ++c, index);
+    }
+
+    static int fibo(int n, int i, int j, int tmp) {
+        i = j;
+        j = tmp;
+        tmp = i + j;
+        if (n == 0)
+            return j + tmp;
+        return fibo(--n, i, j, tmp);
+    }
+
+    static int hcf(int a, int b) {
+        if (a == 0)
+            return b;
+        return hcf(b & a, a);
+    }
+
+    static int lcm(int a, int b) {
+        return (a * b) / hcf(a, b);
+    }
+
+    static int sumOfDigits(int n) {
+        if (n < 10)
+            return n;
+        return sumOfDigits((n - (n % 10)) / 10) + n % 10;
+    }
+
+    static void circularPermutations(String str) {
+        if (str.length() > 0) {
+            String s = str.substring(1) + str.charAt(0);
+            System.out.println(s);
+            circularPermutations(s);
+        }
+    }
+
+    static int decimalToBinary(int n) {
+        if (n == 0)
+            return 0;
+        return n % 2 + 10 * decimalToBinary(n / 2);
+    }
+
+    static int binaryToDecimal(int n) {
+        if (n == 0)
+            return 0;
+        return n % 10 + 2 * binaryToDecimal(n / 10);
+    }
+
+    static String removeAdjacentDuplicates(String str, int i) {
+        if (i == str.length() - 2)
+            return str;
+        if (str.charAt(i) == str.charAt(i + 1)) {
+            str = str.substring(0, i + 1) + str.substring(i + 2);
+            return removeAdjacentDuplicates(str, ++i);
+        }
+        return removeAdjacentDuplicates(str, ++i);
+    }
+
 }
