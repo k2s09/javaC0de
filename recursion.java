@@ -127,6 +127,15 @@ public class recursion {
         return sumOfDigits((n - (n % 10)) / 10) + n % 10;
     }
 
+    static void allPermutations(String str, String tmp) {
+        if (str.length() == 0) {
+            System.out.print(tmp + " ");
+            return;
+        }
+        for (int i = 0; i < str.length(); i++)
+            allPermutations(str.substring(0, i) + str.substring(i + 1), tmp + str.charAt(i));
+    }
+
     static void circularPermutations(String str) {
         if (str.length() > 0) {
             String s = str.substring(1) + str.charAt(0);
