@@ -1,5 +1,9 @@
 public class recursion {
 
+    public static void main(String[] args) {
+        cyclicPermutations("abcd", 5);
+    }
+
     static int sumOfN(int n) {
         if (n == 0)
             return 0;
@@ -136,11 +140,18 @@ public class recursion {
             allPermutations(str.substring(0, i) + str.substring(i + 1), tmp + str.charAt(i));
     }
 
-    static void circularPermutations(String str) {
-        if (str.length() > 0) {
-            String s = str.substring(1) + str.charAt(0);
-            System.out.println(s);
-            circularPermutations(s);
+    static void cyclicPermutations(String str, int i) {
+        if (i > 1)
+            System.out.println(str.substring(i) + str.charAt(i));
+        cyclicPermutations(str.charAt(i-1) + str.substring(0,i-1), str.length());
+    }
+
+    static void perm(String s, int i) {
+        if (i == s.length() - 1)
+            System.out.println();
+        else {
+            System.out.println(s.substring(i) + s.substring(0, i));
+            perm(s, i + 1);
         }
     }
 
