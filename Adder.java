@@ -8,6 +8,7 @@ public class Adder {
 		Scanner sc = new Scanner(System.in);
 		for (int i = 0; i < a.length; i++)
 			a[i] = sc.nextInt();
+		sc.close();
 	}
 	void addtime(Adder X, Adder Y) {
 		this.a[0] = X.a[0] + Y.a[0];
