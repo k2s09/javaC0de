@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9053a235-cd28-42c9-b644-a9bdfbc85b0b" name="Changes" comment="" />
+    <list default="true" id="9053a235-cd28-42c9-b644-a9bdfbc85b0b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ches.java" beforeDir="false" afterPath="$PROJECT_DIR$/ches.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -15,12 +21,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-  </component>
-  <component name="RunManager">
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/money/OneDrive/Projects/Computers/Files",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.arrFill">
+    <configuration name="arrFill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arrFill" />
+      <module name="javaC0de" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="recursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="recursion" />
       <module name="javaC0de" />
@@ -30,6 +50,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.arrFill" />
         <item itemvalue="Application.recursion" />
       </list>
     </recent_temporary>
@@ -45,10 +66,37 @@
       <workItem from="1648132157743" duration="1327000" />
       <workItem from="1648134243259" duration="1728000" />
       <workItem from="1648563656507" duration="10000" />
+      <workItem from="1649357961587" duration="1722000" />
+      <workItem from="1649360583842" duration="64000" />
+      <workItem from="1650815713266" duration="222000" />
+      <workItem from="1650869110623" duration="82000" />
+      <workItem from="1650885943293" duration="41000" />
+      <workItem from="1650979582503" duration="10000" />
+      <workItem from="1650983884514" duration="2000" />
+      <workItem from="1651146176088" duration="40000" />
+      <workItem from="1651148119059" duration="598000" />
+      <workItem from="1651261496360" duration="7000" />
+      <workItem from="1651675529374" duration="3271000" />
+      <workItem from="1651754334969" duration="3860000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
