@@ -16,16 +16,26 @@ public class arrRowShift {
                 arr[i][j] = sc.nextInt();
             }
         }
+        System.out.println("Enter number of shifts");
+        int n = sc.nextInt();
         sc.close();
-
+        // Original Matrix
+        System.out.println("Original Matrix:");
+        for (int i = 0; i < r; i++) {
+            System.out.println(Arrays.toString(arr[i]));
+        }
         // Shifting the rows
-        for (int i = 0; i < r - 1; i++) {
-            for (int j = 0; j < c; j++) {
-                int tmp = arr[i][j];
-                arr[i][j] = arr[i + 1][j];
-                arr[i + 1][j] = tmp;
+        int tmp;
+        for(int k = 1; k <= n; k++) {
+            for (int i = 0; i < r ; i++) {
+                for (int j = 0; j < c; j++) {
+                    tmp = arr[0][j];
+                    arr[0][j] = arr[i][j];
+                    arr[i][j] = tmp;
+                }
             }
         }
+        System.out.println("Row Shifted matrix:");
         for (int i = 0; i < r; i++) {
             System.out.println(Arrays.toString(arr[i]));
         }

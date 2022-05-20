@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9053a235-cd28-42c9-b644-a9bdfbc85b0b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ches.java" beforeDir="false" afterPath="$PROJECT_DIR$/ches.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/arrRowShift.java" beforeDir="false" afterPath="$PROJECT_DIR$/arrRowShift.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/javaC0de/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaC0de/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaC0de/Adder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaC0de/Adder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/javaC0de/ches.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/javaC0de/ches.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,28 +22,49 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/money/OneDrive/Projects/Computers/Files&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/money/GitHub/javaC0de",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
   }
-}</component>
-  <component name="RunManager" selected="Application.arrFill">
-    <configuration name="arrFill" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="arrFill" />
+}]]></component>
+  <component name="RunManager" selected="Application.arrRowShift">
+    <configuration name="arrReverse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arrReverse" />
       <module name="javaC0de" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="recursion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="recursion" />
+    <configuration name="arrRotate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arrRotate" />
+      <module name="javaC0de" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arrRowShift" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arrRowShift" />
+      <module name="javaC0de" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="arrayTools" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="arrayTools" />
+      <module name="javaC0de" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="shiftArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="shiftArray" />
       <module name="javaC0de" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -53,8 +72,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.arrFill" />
-        <item itemvalue="Application.recursion" />
+        <item itemvalue="Application.arrRowShift" />
+        <item itemvalue="Application.arrayTools" />
+        <item itemvalue="Application.arrReverse" />
+        <item itemvalue="Application.arrRotate" />
+        <item itemvalue="Application.shiftArray" />
       </list>
     </recent_temporary>
   </component>
@@ -82,6 +104,7 @@
       <workItem from="1651675529374" duration="3271000" />
       <workItem from="1651754334969" duration="5396000" />
       <workItem from="1651766285014" duration="23000" />
+      <workItem from="1653033256831" duration="1460000" />
     </task>
     <servers />
   </component>
