@@ -11,6 +11,7 @@ class Array {
 			arr[i] = Sc.nextInt();
 			sum += arr[i];
 		}
+		Sc.close();
 		percent = (sum / 500) * 100;
 		System.out.println("Sum of subjects is " + sum + " out of 500");
 		System.out.println("Percentage is " + percent);
