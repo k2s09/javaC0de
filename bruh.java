@@ -9,6 +9,7 @@ public class bruh {
 		System.out.println("Enter age: ");
 		if (sc.nextInt() == 69)
 			System.out.println("Bruh");
+		sc.close();
 		System.out.println("Enter your preference\n1) ");
 	}
 }
