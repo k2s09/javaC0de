@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9053a235-cd28-42c9-b644-a9bdfbc85b0b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javaC0de.iml" beforeDir="false" afterPath="$PROJECT_DIR$/javaC0de.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +41,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/money/GitHub/javaC0de&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/money/Github/javaC0de&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -152,6 +150,8 @@
       <workItem from="1681233651415" duration="118000" />
       <workItem from="1681233853036" duration="1326000" />
       <workItem from="1681588066475" duration="302000" />
+      <workItem from="1686049338962" duration="107000" />
+      <workItem from="1686049552509" duration="61000" />
     </task>
     <servers />
   </component>
