@@ -1,6 +1,10 @@
-public class test {
-    public static void main(String[] args) {
-        int b = Integer.parseInt("5");
-        Integer B = Integer.valueOf("5");
+class test {
+    public static void main(String args[]) {
+        boolean a = false;
+        if (a) {
+            System.out.println("cyka blyat");
+        } else {
+            System.out.println("blin");
+        }
     }
 }
