@@ -81,7 +81,7 @@ public class arrTools {
 	// Rotate an array 90 degrees clockwise
 	static void rotate(int[][] arr) {
 		int[][] rot = new int[arr.length][arr[0].length];
-		for (int i = 0, k = 2; i < rot.length; i++, k--) {
+		for (int i = 0, k = arr.length; i < rot.length; i++, k--) {
 			for (int j = 0; j < rot[i].length; j++) {
 				rot[j][k] = arr[i][j];
 			}
